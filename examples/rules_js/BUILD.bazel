@@ -33,6 +33,7 @@ DATA = glob(["tests/**/*"]) + [
 ENV = {
     "TEST_SERVER": "$(rootpath :test-server)",
     "PLAYWRIGHT_BROWSERS_PATH": "$(rootpath @playwright//:chromium-headless-shell)/../",
+    "DEBUG": "pw:api,pw:browser",
 }
 
 ALL_BROWSERS = [

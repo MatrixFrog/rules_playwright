@@ -2,7 +2,9 @@
 import { defineConfig, devices } from "@playwright/test";
 import { join } from "node:path";
 
-console.log(process.env.PWD, process.env.TEST_SERVER);
+console.log('PWD', process.env.PWD);
+console.log('TEST_SERVER', process.env.TEST_SERVER);
+console.log('PLAYWRIGHT_BROWSERS_PATH', process.env.PLAYWRIGHT_BROWSERS_PATH);
 
 /**
  * @see https://playwright.dev/docs/test-configuration
@@ -37,6 +39,7 @@ export default defineConfig({
     command: `./${process.env.TEST_SERVER}`,
     port: 1234,
     reuseExistingServer: false,
+    stdout: 'pipe',
   },
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
