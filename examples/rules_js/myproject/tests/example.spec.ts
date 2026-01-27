@@ -7,6 +7,11 @@ test.describe.configure({ mode: "parallel" });
 
 test.beforeEach(async ({ page }) => {
   await page.goto("/");
+
+  let content = await page.content();
+  console.log('page:', content);
+  
+  await expect(page).toHaveTitle("React • TodoMVC");
 });
 
 const TODO_ITEMS = [
