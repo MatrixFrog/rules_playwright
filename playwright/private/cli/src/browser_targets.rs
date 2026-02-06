@@ -42,6 +42,7 @@ pub fn get_browser_rules(
 
     let download_paths_json = include_str!("download_paths.json");
     let download_paths: DownloadPaths = serde_json::from_str(download_paths_json)?;
+    dbg!(download_paths);
 
     let has_headles = browsers
         .browsers

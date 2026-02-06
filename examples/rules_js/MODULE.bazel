@@ -7,16 +7,7 @@ local_path_override(
 playwright = use_extension("@mrmeku_rules_playwright//playwright:extensions.bzl", "playwright")
 playwright.repo(
     name = "playwright",
-    playwright_version = "1.57.0",
-    # Derived from running //:playwright_integrity_map
-    integrity_map = {
-        "builds/firefox/1497/firefox-ubuntu-20.04.zip": "sha256-39c11a511bb33392316af94c7e69fa6aee7f6ce19c511ed039612a2d8c5de430",
-        "builds/webkit/2227/webkit-mac-15-arm64.zip": "sha256-70a6d62ce9f0280c6a56e0b548e98b4eeebd29be047769a6381c23e568034f44",
-        "builds/chromium/1200/chromium-headless-shell-linux.zip": "sha256-a9a525cb3832d59a810f78f8ba6c5ed3592a6a488984627f5d827c2a365c8a5a",
-        "builds/webkit/2092/webkit-ubuntu-20.04.zip": "sha256-e1d1db96e964c578958958fc22b87acf3ab53ec54245f8e07925a90c7999fb44",
-        "builds/chromium/1200/chromium-headless-shell-mac-arm64.zip": "sha256-e1620402b69716fa17e38e394c34121ac64c054251803cb13dde58458136e03c",
-        "builds/firefox/1497/firefox-mac-arm64.zip": "sha256-fed31d85a35d117f28a67416b76e190e41e7e2ada66309266d89b9cb0d6d03ee"
-    },
+    playwright_version = "1.58.1",
 )
 use_repo(playwright, "playwright")
 

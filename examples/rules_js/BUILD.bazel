@@ -89,12 +89,9 @@ playwright_integrity_map(
     browsers = playwright_browser_matrix(
         browser_names = [
             "chromium-headless-shell",
-            "firefox",
-            "webkit",
         ],
         platforms = [
             "mac14-arm64",
-            "ubuntu20.04-x64",
         ],
         playright_repo_name = "playwright",
     ),
