@@ -15,6 +15,7 @@ def get_browsers_json_path(ctx, playwright_version, browsers_json):
         return ctx.path(browsers_json)
 
     browsers_json_path = ctx.path("playwright-core")
+    print(playwright_version)
     ctx.download_and_extract(
         url = "https://registry.npmjs.org/playwright-core/-/playwright-core-{}.tgz".format(
             playwright_version,
