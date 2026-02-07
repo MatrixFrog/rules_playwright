@@ -114,7 +114,7 @@ pub fn get_browser_rules(
                                 http_file_workspace_name: format!(
                                     "{browsers_workspace_name_prefix}-{browser_name}-{platform_str}"
                                 ),
-                                http_file_path: template.replace("%s", revision),
+                                http_file_path: template.replace("{revision}", revision).replace("{browserVersion}", browser.browser_version.as_ref().unwrap()),
                                 label: format!("{browser_name}-{platform_str}"),
                                 output_dir: format!(
                                     "{platform_str}/{}-{}",
