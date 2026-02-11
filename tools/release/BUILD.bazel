@@ -48,11 +48,10 @@ copy_to_directory(
 
 write_source_file(
     name = "copy_release_artifacts",
-    diff_test = False,
+    diff_test = True,
     executable = True,
     in_file = ":release_artifacts",
     out_file = "artifacts",
-    tags = ["manual"],
 )
 
 native_binary(
